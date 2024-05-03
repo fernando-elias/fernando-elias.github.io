@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t fernandoelias/somativa2
+        run: docker build -t fernandoelias/somativa2 .
 
       - name: Push Docker image
         run: docker push fernandoelias/somativa2
