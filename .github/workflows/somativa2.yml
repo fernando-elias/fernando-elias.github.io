@@ -19,7 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run : cat index.html
+      - name: Install dependencies
+      - run : pip install flask
+      - uses: App/Threat/sast-sacn-action@master
+        with:
+          type: "python"
 
   deploy-job:
     runs-on: ubuntu-latest
