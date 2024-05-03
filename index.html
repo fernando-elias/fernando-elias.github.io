@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <link href="CSS/estilo.css" rel="stylesheet">
+        <title>SIBI/PUCPR - Homepage</title>
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Sistema Integrado de Bibliotecas da PUCPR</h1>
+            <p>Seja muito bem-vindo(a) e desfrute da melhor biblioteca do Paraná!</p>
+        </div>
+
+        <div class="topnav">
+            <a href="index.html">Início</a>
+            <a href="index.html">Cadastrar Usuário</a>
+            <a href="index.html">Mostrar e Editar Usuários</a>
+            <a href="index.html">Cadastrar Livros</a>
+            <a href="index.html">Mostrar e Editar Livros</a>
+            <a href="index.html">Cadastrar Empréstimo</a>
+            <a href="index.html">Mostrar e Editar Empréstimos</a>
+            <a href="index.html" style="float:right">Sair</a>
+            <a href="index.html" style="float:right">Editar perfil</a>
+        </div>
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>Digite PUCPR no campo abaixo!</h2>
+                    <input type="text" id="texto" placeholder="Digite 'pucpr' aqui">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('texto').addEventListener('input', function() {
+              var textoDigitado = this.value.toLowerCase();         
+              if (textoDigitado === 'pucpr') {       
+                alert('Foi digitado: '+textoDigitado.toUpperCase());       
+              }        
+            });       
+          </script>
+
+        <div class="footer">
+            <h2>Todos direitos reservados / SIBI - PUCPR</h2>
+        </div>
+
+    </body>
+</html>
