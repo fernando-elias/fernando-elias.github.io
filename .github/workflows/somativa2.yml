@@ -39,6 +39,19 @@ jobs:
 
   deploy-job:
     runs-on: ubuntu-latest
+    needs: test-job
     steps:
-      - uses: actions/checkout@v3
-      - run: echo "Finalizado"
+      - name: Checkout code 
+        uses: actions/checkout@v3
+
+      - name: Login to Dockerfile
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Pull Docker image
+        run: docker pull fernandoelias/somativa2
+
+      - name: Run Docker image
+        run: docker run fernandoelias/somativa2
