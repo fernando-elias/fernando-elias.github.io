@@ -2,5 +2,4 @@
 nginx &
 sleep 20
 # replace sleep 20 with your test of inactivity 
-nginx & 
- -s stop
+nginx -s stop
