@@ -54,4 +54,7 @@ jobs:
         run: docker pull fernandoelias/somativa2
 
       - name: Run Docker image
-        run: docker run fernandoelias/somativa2 timeout 30
+        run: 
+            docker run fernandoelias/somativa2
+            docker image ls
+            docker stop fernandoelias/somativa2
